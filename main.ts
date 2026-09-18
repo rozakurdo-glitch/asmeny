@@ -1,4 +1,4 @@
-let mySprite = sprites.create(img`
+let my_neck_my_back = sprites.create(img`
     d d d d d d f f f f d d d d d d 
     d d d d f f f 3 3 f f f d d d d 
     d d d f f f 3 3 3 3 f f f d d d 
@@ -16,3 +16,10 @@ let mySprite = sprites.create(img`
     d d d d d f f f f f f d d d d d 
     d d d d d f f d d f f d d d d d 
     `, SpriteKind.Player)
+music.play(music.stringPlayable("C5 B A G F E D C ", 500), music.PlaybackMode.LoopingInBackground)
+animation.runMovementAnimation(
+my_neck_my_back,
+animation.animationPresets(animation.flyToCenter),
+1000,
+true
+)
